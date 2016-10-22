@@ -1,0 +1,10 @@
+#!/bin/sh
+
+url=`cmus-remote -Q 2>/dev/null | grep 'file' | cut -d " " -f 2-`
+
+content=$(cat ~/Pictures/npart2.txt)
+
+if [ "$content" != "$url" ]; then
+echo $url > ~/Pictures/npart2.txt
+ffmpeg -y -i "$url" -an -vcodec copy ~/Pictures/npart2.jpg
+fi

@@ -1,0 +1,43 @@
+#!/usr/bin/conky -d -c
+##	.conkyrc configuration
+alignment bottom_left
+background no
+border_margin 0
+border_inner_margin 0
+border_outer_margin 0
+border_width	0
+cpu_avg_samples 2
+double_buffer yes
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+gap_x 50
+gap_y 115
+max_specials 1024
+max_user_text 10000
+minimum_size 0 0
+maximum_width 125
+maximum_height 125
+#maximum_size 125 125
+net_avg_samples 2
+no_buffers yes
+override_utf8_locale yes
+#Setup Windows
+own_window yes
+own_window_argb_visual no
+own_window_argb_value 0
+own_window_transparent no
+own_window_class conky-semi
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_type desktop
+pad_percents 2			# to co nizej, miejsc po przecinku
+short_units yes			# krotka wersja podawania wielkosci dyskow np. 612.21M/3.80G
+stippled_borders 3
+text_buffer_size 8000
+total_run_times 0
+update_interval 0.01
+uppercase yes
+own_window_colour 000000
+TEXT
+${if_running spotify}${exec sh ~/Documents/spotifyart}${color #fff}${image ~/Pictures/npart.jpg -p 0,0 -s 125x125 -n}${font Gotham Book:pixelsize=9}                            ${voffset 112}${endif}${if_running cmus}${exec sh ~/Documents/cmusart}${color #fff}${image ~/Pictures/npart2.jpg -p 0,0 -s 125x125 -n}${font Gotham Book:pixelsize=9}                            ${voffset 112}${endif}

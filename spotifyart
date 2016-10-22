@@ -1,0 +1,12 @@
+#!/bin/sh
+
+test=`dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "artUrl"|egrep -v "artUrl"|cut -b 44-|cut -d '"' -f 1|egrep -v ^$`
+
+url=${test/https:\/\/open.spotify.com/http:\/\/i.scdn.co}
+content=$(cat ~/Pictures/npart.txt)
+
+if [ "$content" != "$url" ]; then
+echo $url > ~/Pictures/npart.txt
+curl -s $url > ~/Pictures/npart.jpg
+fi
+
