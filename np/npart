@@ -36,7 +36,7 @@ short_units yes			# krotka wersja podawania wielkosci dyskow np. 612.21M/3.80G
 stippled_borders 3
 text_buffer_size 8000
 total_run_times 0
-update_interval 0.01
+update_interval 1
 uppercase yes
 own_window_colour 000000
 TEXT
