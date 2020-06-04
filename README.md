@@ -1,3 +1,9 @@
+# 2020 Update (please read this first)
+
+This conky widget was created a few years ago, thus now in 2020 (or whenever in the future you're reading this) you might need to make some changes to the widget first before it can work as expected. As of now I don't have any plans to maintain this repo, however you might be interested in checking out [Rayzr522's fork of the repo](https://github.com/Rayzr522/now-clocking) which has been updated to work out of the box and also includes some scripts to make the installation process easier.
+
+---
+
 # Now Clocking
 
 Now Clocking is a Conky widget which shows a Monstercat style Now Playing when music is played via Spotify or cmus, or a clock when no music is playing.
